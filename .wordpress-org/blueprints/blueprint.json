@@ -1,0 +1,39 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/demo-page",
+	"preferredVersions": {
+	  "php": "8.0",
+	  "wp": "latest"
+	},
+	"phpExtensionBundles": [
+	  "kitchen-sink"
+	],
+	"features": {
+	  "networking": true
+	},
+	"login": true,
+	"siteOptions": {
+	  "blogname": "Add Anchor Links demo"
+	},
+	"steps": [
+	  {
+		"step": "installPlugin",
+		"pluginZipFile": {
+		  "resource": "wordpress.org/plugins",
+		  "slug": "add-anchor-links"
+		},
+		"options": {
+		  "activate": true
+		}
+	  },
+	  {
+		"step": "wp-cli",
+		"command": "wp option update add_anchor_links_settings '{\"post\":\"1\",\"page\":\"1\",\"attachment\":\"0\"}' --format=json"
+	  },
+	  {
+		"step": "wp-cli",
+		"command": "wp post create --post_status='published' --post_type='page' --post_content='<!-- wp:paragraph --><p>Feel free to test - just hover over the headings before and you should see, how it works!</p><!-- /wp:paragraph --><!-- wp:heading --><h2 class=\"wp-block-heading\">Heading 2</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis dictum tempus. Cras in tempus metus. Donec fermentum ultricies tellus, vitae molestie turpis semper ac. Donec nec turpis vel nunc congue mollis. Nulla ac justo eu justo malesuada convallis. Aenean hendrerit purus justo, id posuere elit viverra eu. Praesent cursus malesuada ex eget imperdiet. Sed blandit velit lorem, ut venenatis risus aliquet ac. Mauris pellentesque eros ac odio ornare accumsan. </p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3 class=\"wp-block-heading\">Heading 3</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis dictum tempus. Cras in tempus metus. Donec fermentum ultricies tellus, vitae molestie turpis semper ac. Donec nec turpis vel nunc congue mollis. Nulla ac justo eu justo malesuada convallis. Aenean hendrerit purus justo, id posuere elit viverra eu. Praesent cursus malesuada ex eget imperdiet. Sed blandit velit lorem, ut venenatis risus aliquet ac. Mauris pellentesque eros ac odio ornare accumsan. </p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3 class=\"wp-block-heading\">Second Heading 3</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis dictum tempus. Cras in tempus metus. Donec fermentum ultricies tellus, vitae molestie turpis semper ac. Donec nec turpis vel nunc congue mollis. Nulla ac justo eu justo malesuada convallis. Aenean hendrerit purus justo, id posuere elit viverra eu. Praesent cursus malesuada ex eget imperdiet. Sed blandit velit lorem, ut venenatis risus aliquet ac. Mauris pellentesque eros ac odio ornare accumsan. </p><!-- /wp:paragraph -->' --post_title='Demo page'"
+	  }
+	]
+  }
+  

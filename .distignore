@@ -10,3 +10,4 @@ composer.lock
 phpcs.xml.dist
 phpunit.xml
 README.md
+.DS_Store

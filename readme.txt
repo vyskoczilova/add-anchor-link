@@ -1,7 +1,7 @@
 ﻿=== Add Anchor Links ===
 Contributors: vyskoczilova
 Requires at least: 4.8
-Tested up to: 6.6
+Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: anchor, anchor links, content links, content, headings
@@ -35,18 +35,6 @@ Get involved and [join Github](https://github.com/vyskoczilova/add-anchor-links)
 = How can I report security bugs? =
 
 You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team help validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/add-anchor-links).
-
-= I want to use the latest files. How can I do this? =
-
-Use the GitHub Repo rather than the WordPress Plugin. Do as follows:
-
-1. If you haven't already done: [Install git](https://help.github.com/articles/set-up-git)
-
-2. In the console cd into Your 'wp-content/plugins´ directory
-
-3. Type `git clone https://github.com/vyskoczilova/add-anchor-links` or better type `git fork https://github.com/vyskoczilova/add-anchor-links`
-
-4. If you want to update to the latest files (be careful, might be untested on Your WP-Version) type `git pull´.
 
 = I found a bug. Where should I post it? =
 
